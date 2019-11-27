@@ -1,0 +1,94 @@
+
+**** 10/30/19 09:12:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\caiyiteng\Desktop\1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\caiyiteng\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.002s 0 0.0001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 1
+R_R1         N14523 N14348  1k TC=0,0 
+C_C1         N14348 0  100n IC=0 TC=0,0 
+V_V1         N14523 0  
++PULSE -1 1 0.0005 0.00001 0.00001 0.0005 0.001
+C_C2         N15492 0  0.82n IC=0 TC=0,0 
+R_R2         N15627 N15492  2208.6 TC=0,0 
+V_V2         N15488 0  
++PULSE -1 1 0.0001 0.00001 0.00001 0.0001 0.0002
+L_L1         N15488 N15627  0.001H IC=0 
+
+**** RESUMING 1.cir ****
+.END
+
+**** 10/30/19 09:12:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\caiyiteng\Desktop\1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14348)-2.000E-06 (N14523)   -1.0000 (N15488)   -1.0000 (N15492)-2.000E-12     
+
+(N15627)-2.209E-06 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.000E-03
+    V_V2         1.000E-09
+
+    TOTAL POWER DISSIPATION   1.00E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/30/19 09:12:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\Users\caiyiteng\Desktop\1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

@@ -1,0 +1,95 @@
+
+**** 10/31/19 15:13:05 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-2"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\lab3pre-cyt\1-pspicefiles\schematic1\2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.005s 0 0.0001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 1
+R_R1         N14523 N14348  1k TC=0,0 
+C_C1         N14348 0  100n IC=0 TC=0,0 
+V_V1         N14523 0  
++PULSE -1 1 0.0005 0.00001 0.00001 0.0005 0.001
+C_C2         N15492 0  0.82n IC=0 TC=0,0 
+R_R2         N15627 N15492  10000 TC=0,0 
+V_V2         N15488 0  
++PULSE -1 1 0.0001 0.00001 0.00001 0.0001 0.0002
+L_L1         N15488 N15627  0.001H IC=0 
+
+**** RESUMING 2.cir ****
+.END
+
+**** 10/31/19 15:13:05 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-2"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\lab3pre-cyt\1-pspicefiles\schematic1\2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14348)-2.000E-06 (N14523)   -1.0000 (N15488)   -1.0000 (N15492)-2.000E-12     
+
+(N15627)-10.00E-06 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.000E-03
+    V_V2         1.000E-09
+
+    TOTAL POWER DISSIPATION   1.00E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/31/19 15:13:05 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-2"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\lab3pre-cyt\1-pspicefiles\schematic1\2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =         .83
+  Total job time (using Solver 1)   =         .02
+

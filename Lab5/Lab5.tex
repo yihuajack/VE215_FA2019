@@ -1,0 +1,180 @@
+\documentclass[a4paper]{report}
+\usepackage{amsmath,amssymb,booktabs,bm,caption,enumerate,float,geometry,graphicx,hanging,indentfirst,makecell,multirow,setspace,titlesec}
+\geometry{left=4.5cm,right=4.5cm,top=4cm,bottom=4cm}
+\captionsetup[figure]{labelsep=period}
+\captionsetup[table]{labelsep=period}
+\begin{document}
+\renewcommand\thesection{\arabic{section}}
+\begin{Large}
+	\begin{center}
+		\setlength{\baselineskip}{14pt}
+		\vspace{1.25cm}
+		\rule[0cm]{11.2cm}{0.03em}\\
+		\vspace{0.5cm}
+		\textsc{UM-SJTU Joint Institute}\\
+		\vspace{0.25cm}
+		\textsc{Intro to circuits\\(VE215)}
+		\vspace{0.3cm}
+		\rule[0cm]{11.8cm}{0.05em}
+		\vspace{4.9cm}\\
+		\textsc{Laboratory Report}
+	\end{center}
+\end{Large}
+\vspace{0.85cm}
+\begin{large}
+	\begin{center}
+		\textsc{Lab 4}
+		\vspace{1em}\\
+		\textsc{AC Lab}
+	\end{center}
+	\vspace{6cm}
+\end{large}
+\begin{tabular}{l l}
+	Name: Yihua Liu&ID: 518021910998\\
+	Name: Han Fang&ID: 518370910009\\
+	Name: Yiteng Cai&ID: 518370910007\\
+	&\\
+	Date: \today&\\
+\end{tabular}
+\thispagestyle{empty}
+\newpage
+\section{Goal}
+\begin{enumerate}
+\item
+Learn about four types of filters – Low-Pass, High-Pass, Band-Pass, and Band-reject.
+\item
+Learn about transfer functions.
+\item
+Predict the theoretical result and make comparison with lab data.
+\end{enumerate}
+\section{Introduction}
+\subsection{Filter}
+Filters are everywhere in our lives. The circuits built to operate on signals usually apply filters. For example, telephone lines pass the sounds at frequencies between about 100Hz and 3kHz and practically blocks all other frequencies.
+\subsection{Transfer function}
+Mathematically, the transfer function is used to analyze what the circuit did to the signal:
+$$\rm Transfer\ function=\frac{Output\ signal}{Input\ signal}$$
+This function can also be expressed as
+$$H(\omega)=\frac{V_{out}(\omega)}{V_{in}(\omega)}$$
+The magnitude of the transfer function is called “voltage gain”, often measured as the ratio of the peak-to-peak (ppk) voltages:
+$$|H(\omega)|=\left|\frac{V_{out}(\omega)}{V_{in}(\omega)}\right|=\frac{V_{out, ppk}(\omega)}{V_{in, ppk}(\omega)}$$
+It is convenient to express and plot the magnitude of the transfer function on the logarithmic scale using decibels:
+$$|H(\omega)|_{db}=20\cdot\log_10\left(\frac{V_{out, ppk}(\omega)}{V_{in, ppk}(\omega)}\right)$$
+Since both ppk voltages are always positive, the transfer function magnitude is positive and thus can always be converted to decibels. The use of decibels allows us to review data over a broad range.
+\subsection{Types of filters}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{1.jpg}
+\end{figure}
+In the figure above are the four main families of filters:
+(1): Low-Pass; (2): High-Pass; (3): Band-Pass; (4): Band-reject (also called band-stop or notch)
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{2.jpg}
+\end{figure}
+Filter circuits, which we are going to build in this lab, contain resistors, capacitors, and inductors. They are all passive filters.
+\subsection{High-Pass filter}
+The high-pass filter we are going to build uses a capacitor and a resistor.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{3.jpg}
+\end{figure}
+For the high-pass filter, $H(\omega)=\frac{V_{out}(\omega)}{V_{in}(\omega)}=\frac{R}{R+\frac{1}{j\omega C}}=\frac{j\omega RC}{1+j\omega RC}$.
+
+Note that $H(0)=0$, $H(\infty)=1$. Hence, it would only let high frequency pass.
+\subsection{Low-Pass filter}
+The low-pass filter we are going to build uses a capacitor and a resistor.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{4.jpg}
+\end{figure}
+\subsection{Band-Pass filter}
+The band-pass filter we are going to build uses a capacitor, an inductor and a resistor.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{5.jpg}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{6.jpg}
+\end{figure}
+For the band-pass filter, $H(\omega)=\frac{V_{out}(\omega)}{V_{in}(\omega)}=\frac{R}{R+j(\omega L-\frac{1}{\omega C})}$.
+
+Note that $H(0)=0$, $H(\infty)=0$. The band-pass filter passes a band of frequencies centered on the center frequency $\omega 0$, which is given by $\omega_0=1/\sqrt{LC}$.
+\subsection{Band-Stop filter}
+The band-stop filter we are going to build uses a capacitor, an inductor and a resistor.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{7.jpg}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{8.jpg}
+\end{figure}
+For the band-stop filter, $H(\omega)=\frac{V_{out}(\omega)}{V_{in}(\omega)}=\frac{j(\omega L-\frac{1}{\omega C})}{R+j(\omega L-\frac{1}{\omega C})}$.
+
+Note that $H(0)=0$, $H(\infty)=0$. The band-stop filter rejects a band of frequencies centered on the center frequency $\omega_0$, which is given by $\omega_0=1/\sqrt{LC}$.
+\section{Measurement}
+\begin{enumerate}[1.]
+	\item According to the pre-lab assignments, we are supposed to fill in the Expected Data columns in the tables below before the lab.
+	\item During the lab:
+	\begin{enumerate}[i)]
+		\item Construct the circuit for each type of filter. Resister: R = 982$\Omega$; Capacitor: C = 0.1$\mu$F; Inductor: L = 1mH.
+		\item Set the Input Signal in the function generator to be Sine Wave with amplitude of 5 $\rm{V_{ppk}}$ and change the frequency accordingly.
+		\item Use the oscilloscope to detect the amplitudes of the Input and Output signals. Record them respectively in the first two column in the tables.
+		\item Additionally for the Band-reject Filter, when the frequency approach the critical frequency at which the Transfer Function Magnitude reaches its minimum, the Output Signal Amplitude changes rapidly. For a more accurate result, you can (but not strictly required to) add some more rows to record the data (Table V).
+	\end{enumerate}
+	\item After the lab, we should calculate with the experimental data for the "Transfer function magnitude" and "Transfer function magnitude, in dB" columns.
+\end{enumerate}
+\section{Results and Calculations}
+\subsection{Low-pass Filter}
+\input{Table_1}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{9.jpg}
+	\caption{Measurement of low-pass filter.}
+\end{figure}
+\subsection{High-pass Filter}
+\input{Table_2}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{10.jpg}
+	\caption{Measurement of high-pass filter.}
+\end{figure}
+\subsection{Band-pass Filter}
+\input{Table_3}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{11.jpg}
+	\caption{Measurement of band-pass filter.}
+\end{figure}
+\subsection{Band-reject Filter}
+\input{Table_4}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{12.jpg}
+	\caption{Measurement of band-reject filter.}
+\end{figure}
+\section{Conclusion and Discussion}
+In this experiment, in general, we obtained reasonable data for output signal amplitude in $\rm{V_{ppk}}$ and see that the trend of the transfer function magnitude follows the trend of the ratio of the output signal amplitude to the input signal amplitude.
+
+However, when we measurement the output signal amplitude of band-reject filter, 3 of the digits have higher value than 5.0, i.e. the input signal amplitude. This error may come from the error of input signal amplitude, which possibly higher than $5.000\rm{V_{ppk}}$. Besides, the cursor is automatically generated by the oscilloscope without additional adjustment, which might be not accurate.
+
+In conclusion, we learned about transfer functions and four types of filters – Low-Pass, High-Pass, Band-Pass, and Band-reject. Besides, We predicted the theoretical result of transfer function magnitude and made comparison with measurement data in lab.
+\section*{Reference}
+Lab 5 Manual.
+\vspace{2cm}
+\section*{Data sheet}
+\newpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{13.jpg}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{14.jpg}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{15.jpg}
+\end{figure}
+\end{document}
