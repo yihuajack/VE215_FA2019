@@ -1,0 +1,48 @@
+
+**** 09/24/19 15:11:22 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-3_75"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\3_75-PSpiceFiles\SCHEMATIC1\3_75.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "3_75.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2 0 0.0001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 3_75
+R_R1         N00124 N00131  30 TC=0,0 
+R_R2         N00124 N00149  10 TC=0,0 
+R_R3         N00149 N00131  10 TC=0,0 
+R_R4         N00149 N00124  30 TC=0,0 
+R_R5         N00149 N00131  30 TC=0,0 
+
+**** RESUMING 3_75.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N00124 is floating
+
+ERROR(ORPSIM-15142): Node N00131 is floating
+
+ERROR(ORPSIM-15142): Node N00149 is floating
+

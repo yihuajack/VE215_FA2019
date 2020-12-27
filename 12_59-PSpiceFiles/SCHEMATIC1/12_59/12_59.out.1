@@ -1,0 +1,153 @@
+
+**** 11/25/19 01:46:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-12_59"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\12_59-PSpiceFiles\SCHEMATIC1\12_59.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "12_59.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 1 60 60
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 12_59
+V_V1         N00321 N00277 DC 0Vdc AC 100Vac 0
+V_V2         N00314 N00277 DC 0Vdc AC 100Vac 120
+V_V3         N00291 N00277 DC 0Vdc AC 100Vac -120
+           
+.PRINT         AC 
++ VM([N00291]) 
++ VP([N00291])    
+R_R1         N00291 0  40 TC=0,0 
+C_C1         0 N00321  0.2mF  TC=0,0 
+L_L1         N00314 0  10mH  
+           
+.PRINT         AC 
++ VM([N00321]) 
++ VP([N00321])    
+           
+.PRINT         AC 
++ VM([N00314]) 
++ VP([N00314])    
+
+**** RESUMING 12_59.cir ****
+.END
+
+**** 11/25/19 01:46:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-12_59"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\12_59-PSpiceFiles\SCHEMATIC1\12_59.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00277)    0.0000 (N00291)    0.0000 (N00314)    0.0000 (N00321)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/25/19 01:46:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-12_59"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\12_59-PSpiceFiles\SCHEMATIC1\12_59.sim ] 
+
+
+ ****     AC ANALYSIS                      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+  FREQ        VM(N00291)  VP(N00291)  
+
+
+   6.000E+01   2.141E+02  -8.149E+01
+
+**** 11/25/19 01:46:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-12_59"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\12_59-PSpiceFiles\SCHEMATIC1\12_59.sim ] 
+
+
+ ****     AC ANALYSIS                      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+  FREQ        VM(N00321)  VP(N00321)  
+
+
+   6.000E+01   2.206E+02  -3.456E+01
+
+**** 11/25/19 01:46:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-12_59"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\12_59-PSpiceFiles\SCHEMATIC1\12_59.sim ] 
+
+
+ ****     AC ANALYSIS                      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+  FREQ        VM(N00314)  VP(N00314)  
+
+
+   6.000E+01   4.991E+01  -5.059E+01
+
+
+          JOB CONCLUDED
+
+**** 11/25/19 01:46:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-12_59"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\12_59-PSpiceFiles\SCHEMATIC1\12_59.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

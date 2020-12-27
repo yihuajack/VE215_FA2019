@@ -1,0 +1,19 @@
+* source 12_59
+V_V1         N00321 N00277 DC 0Vdc AC 100Vac 0
+V_V2         N00314 N00277 DC 0Vdc AC 100Vac 120
+V_V3         N00291 N00277 DC 0Vdc AC 100Vac -120
+           
+.PRINT         AC 
++ VM([N00291]) 
++ VP([N00291])    
+R_R1         N00291 0  40 TC=0,0 
+C_C1         0 N00321  0.2mF  TC=0,0 
+L_L1         N00314 0  10mH  
+           
+.PRINT         AC 
++ VM([N00321]) 
++ VP([N00321])    
+           
+.PRINT         AC 
++ VM([N00314]) 
++ VP([N00314])    

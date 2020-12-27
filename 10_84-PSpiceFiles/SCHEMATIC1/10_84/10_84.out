@@ -1,0 +1,108 @@
+
+**** 11/05/19 20:01:22 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-10_84"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\10_84-PSpiceFiles\SCHEMATIC1\10_84.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "10_84.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1 0.1592 0.1592
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 10_84
+C_C1         N00196 N00355  0.5  TC=0,0 
+L_L1         N00196 N00229  4  
+I_I1         N00196 0 DC 0Adc AC 3Aac 
+R_R1         0 N00229  1 TC=0,0 
+R_R2         0 N00355  2 TC=0,0 
+           
+.PRINT         AC 
++ VM([N00355]) 
++ VP([N00355])    
+G_G1         N00355 N00229 N00229 0 2
+
+**** RESUMING 10_84.cir ****
+.END
+
+**** 11/05/19 20:01:22 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-10_84"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\10_84-PSpiceFiles\SCHEMATIC1\10_84.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00196)    0.0000 (N00229)    0.0000 (N00355)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/05/19 20:01:22 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-10_84"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\10_84-PSpiceFiles\SCHEMATIC1\10_84.sim ] 
+
+
+ ****     AC ANALYSIS                      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+  FREQ        VM(N00355)  VP(N00355)  
+
+
+   1.592E-01   1.664E+00  -1.464E+02
+
+
+          JOB CONCLUDED
+
+**** 11/05/19 20:01:22 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-10_84"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\10_84-PSpiceFiles\SCHEMATIC1\10_84.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

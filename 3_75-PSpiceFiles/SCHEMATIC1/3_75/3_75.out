@@ -1,0 +1,88 @@
+
+**** 09/29/19 14:05:57 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-3_75"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\3_75-PSpiceFiles\SCHEMATIC1\3_75.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "3_75.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2 0 0.0001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 3_75
+R_R1         N00124 N00131  30 TC=0,0 
+R_R2         N00124 N00361  10 TC=0,0 
+R_R3         N00361 N00131  10 TC=0,0 
+R_R4         0 N00124  30 TC=0,0 
+R_R5         0 N00131  30 TC=0,0 
+V_V1         N00361 0 120Vdc
+
+**** RESUMING 3_75.cir ****
+.END
+
+**** 09/29/19 14:05:57 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-3_75"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\3_75-PSpiceFiles\SCHEMATIC1\3_75.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00124)   90.0000 (N00131)   90.0000 (N00361)  120.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.000E+00
+
+    TOTAL POWER DISSIPATION   7.20E+02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/29/19 14:05:57 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-3_75"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\3_75-PSpiceFiles\SCHEMATIC1\3_75.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

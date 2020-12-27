@@ -1,0 +1,115 @@
+
+**** 10/19/19 22:27:48 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\hw5-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HW5
+V_V1         N14501 0 180
+X_U1         0 N14526 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N14501 N14508 Sw_tOpen PARAMS: tOpen=1 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+R_R1         N14508 N14512  6 TC=0,0 
+R_R2         N14526 N14519  3 TC=0,0 
+R_R3         N14512 N14552  4 TC=0,0 
+R_R5         N14519 N14512  6 TC=0,0 
+L_L1         N14519 N14552  2  
+
+**** RESUMING bias.cir ****
+.END
+
+**** 10/19/19 22:27:48 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\hw5-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       X_U2.Smod       
+         RON     .01             .01         
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 10/19/19 22:27:48 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\hw5-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14501)  180.0000 (N14508)  180.0000 (N14512)  180.0000 (N14519)  180.0000     
+
+(N14526)  180.0000 (N14552)  180.0000 (X_U1.3)    0.0000 (X_U2.3)    1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.800E-04
+    X_U1.V1      0.000E+00
+    X_U2.V1     -1.000E-12
+
+    TOTAL POWER DISSIPATION   3.24E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/19/19 22:27:48 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\On Editing\Sophomore\VE215,Intro to Circuits\hw5-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+
