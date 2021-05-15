@@ -1,6 +1,4 @@
-# VE215_Lab
-
-20201227 Update:
+# VE215_FA2019
 
 ### Honor Code Disclaimer
 
@@ -38,4 +36,4 @@ Note that in Lab 5 you need to measure input signal amplitude in Vppk or (m)Vppk
 
 Since we do not need to submit all the files to Canvas but only the PDF files, so the manuals and data sheets are also included in each folders. However, all of them contain no information about authors, revisers, or references.
 
-As is shown in the title page of each report, the cooperators are Fang Han and Cai Yiteng.
+As is shown in the title page of each lab report, the lab cooperators are [Fang Han](https://github.com/Kasumigaoka-Utaha) and [Cai Yiteng](https://github.com/AlonsoChate).
